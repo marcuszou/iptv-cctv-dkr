@@ -15,12 +15,12 @@
 - WIndows: PotPlayer - All-functional, Live-stream loading very fastly
 - macOS: IINA - Beautiful GUI, smooth experience
 - Linux: VLC Media Player - light-weight, high adaptivity
-- Android (phone or TV Box): myth, TiviMate
+- Android (phone or TV Box): mytv, TiviMate
 - iOS: ntPlayer, APTV - multi-format, easy to use
 
 
 
-## Env
+## Environment
 
 - Docker system has been installed
 
@@ -51,7 +51,7 @@
 
      ```
      ## Then we can use IPTV Player to open URL:
-     ## http://<your-IP-Address>:35455/tv.m3u
+     http://<your-IP-Address>:35455/tv.m3u
      ```
 
    
@@ -62,15 +62,15 @@
    docker run -d --restart=always -p 35456:35456 --name allinone_format yuexuangu/allinone_format:latest
    ```
 
-3. Request re-grouped m3u file
+3. Request re-grouped m3u file from the IPTV Player:
 
-​	Format: http://<Server-IP>:35456/tv.php?h=<Server-IP>&p=<allinone-Port>&m=1&t=0
+​	Format: `http://<Server-IP>:35456/tv.php?h=<Server-IP>&p=<allinone-Port>&m=1&t=0`
 
 ​	Parameters:
 
 ​	h - Optional,  can be public Ip address or local IP address (default), 127.0.0.1 is not allowed
-​	p - optional, deployment port, default = 35455 (same as Step 1)
-​	m - optional, default=1, re-group the TV channels (recommended); 0- meaning not re-group
+​	p - Optional, deployment port, default = 35455 (same as Step 1)
+​	m - Optional, default=1, re-group the TV channels (recommended); 0- meaning not re-group
 ​	t - Optional, output format, fedault=0 (m3u), aother value=1 (text)
 
 ​	Example:
