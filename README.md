@@ -69,11 +69,18 @@
 ​	Parameters:
 
 ​	h - Optional,  can be public Ip address or local IP address (default), 127.0.0.1 is not allowed
+
 ​	p - Optional, deployment port, default = 35455 (same as Step 1)
+
 ​	m - Optional, default=1, re-group the TV channels (recommended); 0- meaning not re-group
+
 ​	t - Optional, output format, fedault=0 (m3u), aother value=1 (text)
 
 ​	Example:
+
 ​		http://172.20.10.8:35456/tv.php
+
 ​	This means:
+
 ​		http://172.20.10.8:35456/tv.php?h=172.20.10.8&p=35455&m=1&t=0
+
