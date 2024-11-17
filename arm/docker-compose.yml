@@ -1,0 +1,24 @@
+services:
+  av3a-assistant:
+    image: youshandefeiyang/av3a-assistant:arm64
+    container_name: av3a-assistant
+    privileged: true
+    restart: unless-stopped
+    ports:
+      - "35442:35442"
+    networks:
+      - my-network
+
+  allinone:
+    image: youshandefeiyang/allinone
+    container_name: allinone
+    privileged: true
+    restart: unless-stopped
+    ports:
+      - "35455:35455"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
